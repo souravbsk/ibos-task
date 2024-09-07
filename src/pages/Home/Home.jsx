@@ -1,16 +1,12 @@
-import React, { useState } from "react";
-import SideBar from "./SideBar";
-import ProductBar from "./ProductBar/ProductBar";
+import React from "react";
+import HeroSection from "./HeroSection";
+import ProductSection from "./ProductSection";
 
 const Home = () => {
-  const [cat, setCat] = useState(null);
   return (
-    <div className="container relative">
-      <div className="grid lg:grid-cols-4 grid-cols-1 gap-16">
-        <SideBar cat={cat} setCat={setCat}></SideBar>
-        <ProductBar cat={cat} setCat={setCat}></ProductBar>
-      </div>
-      
+    <div>
+      <HeroSection></HeroSection>
+      <ProductSection></ProductSection>
     </div>
   );
 };

@@ -13,3 +13,7 @@
 .container {
   @apply max-w-full md:w-10/12 mx-auto px-3 md:px-0;
 }
+
+.hero-img{
+  background-image: url('https://img.freepik.com/premium-photo/advertising-banner-multicolored-office-chairs-standing-line-against-dark-wall-copy-space_217690-254.jpg');
+}

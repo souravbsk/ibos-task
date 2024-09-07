@@ -27,7 +27,7 @@ const Footer = () => {
                 <Link to="/">Master Plan</Link>
               </li>
               <li>
-                d<Link to="/">Jobs</Link>
+                <Link to="/">Jobs</Link>
               </li>
               <li>
                 <Link to="/">Invest</Link>
@@ -69,7 +69,7 @@ const Footer = () => {
                 <Link to="/">Willow X Community</Link>
               </li>
               <li>
-                d<Link to="/">Developer & Maker Access</Link>
+                <Link to="/">Developer & Maker Access</Link>
               </li>
               <li>
                 <Link to="/">Special Cases</Link>
