@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import useProductDataLoad from "../../../hooks/useProductDataLoad";
 import ProductCard from "../../../components/ProductCard/ProductCard";
+import { ProductContext } from "../../../Providers/ProductProviders";
 
 const ProductBar = ({ cat, setCat }) => {
   const [productData, setProductData] = useState([]);
-  const { products } = useProductDataLoad();
+  const { products } = useContext(ProductContext);
   const [loading, setIsLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10; 
+  const itemsPerPage = 10;
 
   useEffect(() => {
     const filterProducts = () => {
@@ -16,9 +17,9 @@ const ProductBar = ({ cat, setCat }) => {
 
       if (cat) {
         filteredProducts = products.filter(
-          (product) =>
-            product?.cat?.toLowerCase() === cat.toLowerCase()
+          (product) => product?.cat?.toLowerCase() === cat.toLowerCase()
         );
+        setCurrentPage(1);
       }
 
       setProductData(filteredProducts);

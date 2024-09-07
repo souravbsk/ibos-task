@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
-import { addToDb, removeFromDb, decreaseFromDb } from "../../utils/fakedb"; // Import decrease function
+import { addToDb, removeFromDb, decreaseFromDb } from "../../utils/fakedb"; 
 import { RefetchContext } from "../../Providers/RefetchProvider";
 
 const ProductCartBox = ({ product }) => {
@@ -81,7 +81,7 @@ const ProductCartBox = ({ product }) => {
         </div>
       </div>
       <p className="text-xl md:text-right mt-4 font-bold">
-        €{totalPrice.toFixed(2)} {/* Display the total price */}
+        €{totalPrice.toFixed(2)} 
       </p>
     </div>
   );

@@ -5,11 +5,12 @@ import ProductBar from "./ProductBar/ProductBar";
 const Home = () => {
   const [cat, setCat] = useState(null);
   return (
-    <div className="container">
+    <div className="container relative">
       <div className="grid lg:grid-cols-4 grid-cols-1 gap-16">
         <SideBar cat={cat} setCat={setCat}></SideBar>
         <ProductBar cat={cat} setCat={setCat}></ProductBar>
       </div>
+      
     </div>
   );
 };

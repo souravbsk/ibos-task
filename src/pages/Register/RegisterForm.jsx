@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import FurniFlex from "../../assets/auth/FurniFlex.png";
 import InputwithLable from "../../components/InputwithLable/InputwithLable";
-import { Link,  useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 import { AuthContext } from "../../Providers/AuthProviders";
 const RegisterForm = () => {
@@ -36,7 +36,10 @@ const RegisterForm = () => {
     <div className=" bg-[#FAFAFA] border w-full p-6 mx-auto max-w-lg ">
       <div className="text-center flex flex-col gap-3 items-center ">
         <h2 className="text-2xl font-bold">Welcome To</h2>
-        <img className="md:w-1/4 w-2/4" src={FurniFlex} alt="" />
+        <Link to="/" className="w-full text-center">
+          {" "}
+          <img className="md:w-1/4 w-1/3 mx-auto" src={FurniFlex} alt="" />
+        </Link>
         <p className="text-[#707070] font-medium">
           Signup for purchase your desire products
         </p>
@@ -83,7 +86,6 @@ const RegisterForm = () => {
           <label className="flex items-center gap-3 cursor-pointer">
             <input
               type="checkbox"
-              defaultChecked
               name="terms"
               className="checkbox checkbox-sm"
             />

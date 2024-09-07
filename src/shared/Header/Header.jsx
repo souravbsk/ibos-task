@@ -22,20 +22,18 @@ const Header = () => {
   return (
     <header className="w-full bg-white shadow-md fixed top-0 z-50">
       <nav className="max-w-screen-xl mx-auto grid grid-cols-3 items-center py-4 px-4 md:px-8">
-        {/* Logo Section */}
         <div className="flex justify-start">
           <Link to="/">
             <img src={logo} alt="Logo" className="h-10" />
           </Link>
         </div>
 
-        {/* Menu Section - Hidden in Mobile, Shown in Desktop */}
         <div className="hidden md:flex justify-center">
           <ul className="flex space-x-8">
             <li>
               <Link
                 to="/"
-                className="text-lg text-gray-700 hover:text-blue-500"
+                className="text-lg text-black duration-300 hover:font-semibold"
               >
                 Home
               </Link>
@@ -43,7 +41,7 @@ const Header = () => {
             <li>
               <Link
                 to="/products"
-                className="text-lg text-gray-700 hover:text-blue-500"
+                className="text-lg text-black duration-300 hover:font-semibold"
               >
                 Products
               </Link>
@@ -51,7 +49,7 @@ const Header = () => {
             <li>
               <Link
                 to="/categories"
-                className="text-lg text-gray-700 hover:text-blue-500"
+                className="text-lg text-black duration-300 hover:font-semibold"
               >
                 Categories
               </Link>
@@ -59,7 +57,7 @@ const Header = () => {
             <li>
               <Link
                 to="/blog"
-                className="text-lg text-gray-700 hover:text-blue-500"
+                className="text-lg text-black duration-300 hover:font-semibold"
               >
                 Blog
               </Link>
@@ -67,9 +65,7 @@ const Header = () => {
           </ul>
         </div>
 
-        {/* User Section */}
         <div className="flex md:col-span-1 col-span-2 justify-end items-center gap-4">
-          {/* Cart Icon */}
           <Link to="/cart" className="relative">
             <BsBucket className="text-3xl text-gray-700" />
             <span className="absolute -bottom-2 -right-2 text-xs bg-black text-white w-5 h-5 flex items-center justify-center rounded-full">
@@ -77,7 +73,6 @@ const Header = () => {
             </span>
           </Link>
 
-          {/* User and Logout/Sign In */}
           {user ? (
             <div className="flex items-center gap-4">
               {user?.photoURL ? (
@@ -101,7 +96,7 @@ const Header = () => {
                     <li>
                       <button
                         onClick={handleLogOut}
-                        className="px-4 py-2 bg-blue-600 hover:text-black text-white rounded-md"
+                        className="px-4 py-2 bg-black text-white  hover:text-white rounded-md"
                       >
                         Logout
                       </button>
@@ -121,7 +116,6 @@ const Header = () => {
             </Link>
           )}
 
-          {/* Mobile Menu Toggle */}
           <button
             onClick={() => setShowNav(!showNav)}
             className="md:hidden text-gray-700"
@@ -150,7 +144,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/"
-                  className="text-lg text-gray-700 hover:text-blue-500"
+                  className="text-lg text-black duration-300 hover:font-semibold"
                   onClick={() => setShowNav(false)}
                 >
                   Home
@@ -159,7 +153,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/products"
-                  className="text-lg text-gray-700 hover:text-blue-500"
+                  className="text-lg text-black duration-300 hover:font-semibold"
                   onClick={() => setShowNav(false)}
                 >
                   Products
@@ -168,7 +162,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/categories"
-                  className="text-lg text-gray-700 hover:text-blue-500"
+                  className="text-lg text-black duration-300 hover:font-semibold"
                   onClick={() => setShowNav(false)}
                 >
                   Categories
@@ -177,7 +171,7 @@ const Header = () => {
               <li>
                 <Link
                   to="/blog"
-                  className="text-lg text-gray-700 hover:text-blue-500"
+                  className="text-lg text-black duration-300 hover:font-semibold"
                   onClick={() => setShowNav(false)}
                 >
                   Blog

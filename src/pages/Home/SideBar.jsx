@@ -17,8 +17,8 @@ const SideBar = ({ cat, setCat }) => {
     },
   ];
   return (
-    <div className=" lg:border-r">
-      <div className="flex  pt-8 pr-10 gap-3 flex-row w-full  items-center lg:flex-col flex-wrap ">
+    <div className="  lg:border-r">
+      <div className="flex sticky top-24  md:pt-8 pr-10 gap-3 flex-row w-full  items-center lg:flex-col flex-wrap ">
         {categories.map((category, i) => (
           <>
             <button
